@@ -48,11 +48,17 @@ class Drawing:
         turtle.right(90)
         self.location[0], self.location[1] = turtle.pos()
 
-    def draw(self, iterations=100):
-        for _ in range(iterations):
-            self.draw_polygon()
-            self.relocate()
-            self.size *= reduction_ratio
+    def draw(self):
+        if self.choice in (1,2,3,4):
+            for _ in range(1):
+                self.draw_polygon()
+                self.relocate()
+                self.size *= reduction_ratio
+        else:
+            for _ in range(self.num_sides):
+                self.draw_polygon()
+                self.relocate()
+                self.size *= reduction_ratio
 
 # Create multiple drawings with different parameters
 for _ in range(20):
