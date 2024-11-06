@@ -54,6 +54,12 @@ class Drawing:
                 self.draw_polygon()
                 self.relocate()
                 self.size *= reduction_ratio
+        elif self.choice == 9:
+            x = random.randint(1,self.num_sides)
+            for _ in range(x):
+                self.draw_polygon()
+                self.relocate()
+                self.size *= reduction_ratio
         else:
             for _ in range(self.num_sides):
                 self.draw_polygon()
